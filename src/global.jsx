@@ -10,7 +10,8 @@ export default function (props) {
 	const {
 		children,
 		title,
-		url
+		url,
+		isHeaderFixed,
 	} = props
 	
 	return (
@@ -23,7 +24,7 @@ export default function (props) {
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 				<link rel="manifest" href="/site.webmanifest" />
 			</Head>
-			<Header url={ url }/>
+			<Header url={ url } isHeaderFixed={isHeaderFixed}/>
 			<Content>
 				{ children }
 			</Content>
