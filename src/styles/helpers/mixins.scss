@@ -30,20 +30,20 @@
 	inset: 0;
 }
 
-@mixin abs-cover {
+@mixin abs-cover-center {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	translate: -50% -50%;
 }
 
-@mixin abs-cover {
+@mixin abs-cover-left {
 	position: absolute;
 	left: 50%;
 	translate: -50%;
 }
 
-@mixin abs-cover {
+@mixin abs-cover-top {
 	position: absolute;
 	top: 50%;
 	translate: 0 -50%;
