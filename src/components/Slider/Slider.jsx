@@ -72,7 +72,7 @@ const Slider = (props) => {
 			{
 				!navigationTargetElementId && (
 					<SliderNavigation
-						className="slider-navigation"
+						className="slider__navigation"
 						mode={navigationMode}
 						position={navigationPosition}
 						isHiddenMobile={isNavigationHiddenMobile}
