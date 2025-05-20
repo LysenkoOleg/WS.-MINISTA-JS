@@ -6,6 +6,7 @@ import Section from '@/layouts/Section/Section';
 import SliderNavigation from '@/components/SliderNavigation';
 import Slider from '@/components/Slider';
 import CategoryCard from '@/components/CategoryCard/CategoryCard';
+import MovieCard from '@/components/MovieCard';
 
 const Collections = () => {
 	return (
@@ -25,6 +26,7 @@ const Collections = () => {
 							const {
 								title,
 								categoryItems,
+								movieItems,
 								sliderParams
 							} = collectionItem
 							
@@ -49,9 +51,10 @@ const Collections = () => {
 										isBeyondTheViewportOnMobileS
 									>
 										{
-											categoryItems.map((categoryItem, index) => (
-												<CategoryCard {...categoryItem}
-												key={index}/>
+											categoryItems?.map((categoryItem, index) => (
+												<CategoryCard {...categoryItem} key={index}/>
+											)) ?? movieItems?.map((movieItem, index) => (
+												<MovieCard {...movieItem} key={index} />
 											))
 										}
 									</Slider>
