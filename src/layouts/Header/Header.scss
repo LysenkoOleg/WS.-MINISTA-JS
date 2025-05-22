@@ -24,7 +24,7 @@
 
 	&__inner {
 		display: grid;
-		grid-template-columns: 1fr auto;
+		grid-template-columns: 1fr auto 1fr;
 		align-items: center;
 		column-gap: 16px;
 
@@ -129,11 +129,8 @@
 	&__actions {
 		display: flex;
 		align-items: center;
+		justify-content: end;
 		column-gap: 10px;
-
-		@include tablet {
-			justify-content: end;
-		}
 	}
 
 	&__burger-button {
