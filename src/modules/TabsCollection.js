@@ -171,7 +171,6 @@ class TabsCollection {
 	
 	init() {
 		document.querySelectorAll(rootSelector).forEach((element) => {
-			console.log(element);
 			new Tabs(element)
 		})
 	}

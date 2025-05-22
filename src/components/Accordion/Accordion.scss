@@ -51,7 +51,7 @@
 		min-height: var(--accordionGroupCounterHeight);
 		padding-right: 50px;
 		color: inherit;
-		transition-duration: var(--transition-duration);
+		transition-duration: var(--transition-duration-longer);
 
 		&::before,
 		&::after {

@@ -23,10 +23,15 @@
 	}
 
 	&__inner {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr auto;
 		align-items: center;
-		justify-content: space-between;
 		column-gap: 16px;
+
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	&__overlay-menu-dialog {
@@ -51,15 +56,17 @@
 			translate: 50%;
 		}
 
-		&:not([open]) {
-			@include starting-styles;
-		}
-
-		&[open] {
-			display: flex;
-
-			@starting-style {
+		@include tablet {
+			&:not([open]) {
 				@include starting-styles;
+			}
+
+			&[open] {
+				display: flex;
+
+				@starting-style {
+					@include starting-styles;
+				}
 			}
 		}
 	}
@@ -123,6 +130,10 @@
 		display: flex;
 		align-items: center;
 		column-gap: 10px;
+
+		@include tablet {
+			justify-content: end;
+		}
 	}
 
 	&__burger-button {
